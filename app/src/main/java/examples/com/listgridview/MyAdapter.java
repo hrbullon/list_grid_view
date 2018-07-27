@@ -29,8 +29,8 @@ public class MyAdapter extends BaseAdapter {
     }
 
     @Override
-    public Object getItem(int postition) {
-        return this.names.get(postition);
+    public Object getItem(int position) {
+        return this.names.get(position);
     }
 
     @Override
@@ -39,7 +39,7 @@ public class MyAdapter extends BaseAdapter {
     }
 
     @Override
-    public View getView(int postition, View convertView, ViewGroup viewGroup) {
+    public View getView(int position, View convertView, ViewGroup viewGroup) {
 
         ViewHolder holder;
 
@@ -55,14 +55,13 @@ public class MyAdapter extends BaseAdapter {
             holder = (ViewHolder) convertView.getTag();
         }
 
-
         //Nos traemos el valor actual dependiente de la posición
-        String currentName = names.get(postition);
+        String currentName = names.get(position);
         //Asi tambien se puede acceder a un item del array
         //currentName = (String) getItem(postition);
 
         //Referenciamos el o los elementos a modificar y lo rellenamos
-        holder.nameTextView.setText(currentName);
+        holder.nameTextView.setText(currentName); ;
 
         //Devolvemos la vista inflada y modificada con nuestros datos
         return convertView;
