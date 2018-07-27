@@ -8,7 +8,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btn_list_view_simple;
+    Button btn_list_view_simple, btn_list_view_custom_basic;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,12 +26,20 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btn_list_view_custom_basic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), ListViewCustomBasicActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     private void getUI(){
 
         btn_list_view_simple = (Button) findViewById(R.id.btn_list_view_simple);
-
+        btn_list_view_custom_basic = (Button) findViewById(R.id.btn_list_view_custom_basic);
 
     }
 }

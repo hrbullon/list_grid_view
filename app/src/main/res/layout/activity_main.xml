@@ -9,6 +9,19 @@
     <Button
         android:id="@+id/btn_list_view_simple"
         android:layout_width="match_parent"
+        android:text="@string/text_btn_list_view_simple"
+        android:textColor="@android:color/white"
+        android:background="@color/colorAccent"
         android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btn_list_view_custom_basic"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@color/colorAccent"
+        android:text="@string/text_btn_list_view_custom_basic"
+        android:textColor="@android:color/white"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="62dp" />
 
 </android.support.constraint.ConstraintLayout>
