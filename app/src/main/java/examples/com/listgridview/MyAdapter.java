@@ -41,12 +41,20 @@ public class MyAdapter extends BaseAdapter {
     @Override
     public View getView(int postition, View convertView, ViewGroup viewGroup) {
 
-        //Copiamos la vista
-        View v = convertView;
+        ViewHolder holder;
 
-        //inflamos la vista que nos ha llegado con nuestro layout personalizado
-        LayoutInflater layoutInflater = LayoutInflater.from(this.context);
-        v = layoutInflater.inflate(R.layout.list_item, null);
+        if(convertView == null){
+            //inflamos la vista que nos ha llegado con nuestro layout personalizado
+            LayoutInflater layoutInflater = LayoutInflater.from(this.context);
+            convertView = layoutInflater.inflate(R.layout.list_item, null);
+
+            holder = new ViewHolder();
+            holder.nameTextView = (TextView) convertView.findViewById(R.id.textView);
+            convertView.setTag(holder);
+        }else{
+            holder = (ViewHolder) convertView.getTag();
+        }
+
 
         //Nos traemos el valor actual dependiente de la posición
         String currentName = names.get(postition);
@@ -54,10 +62,13 @@ public class MyAdapter extends BaseAdapter {
         //currentName = (String) getItem(postition);
 
         //Referenciamos el o los elementos a modificar y lo rellenamos
-        TextView textView = (TextView) v.findViewById(R.id.textView);
-        textView.setText(currentName);
+        holder.nameTextView.setText(currentName);
 
         //Devolvemos la vista inflada y modificada con nuestros datos
-        return v;
+        return convertView;
+    }
+
+    static class ViewHolder {
+        private TextView nameTextView;
     }
 }

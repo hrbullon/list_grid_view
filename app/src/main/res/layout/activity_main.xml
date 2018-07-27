@@ -22,6 +22,7 @@
         android:text="@string/text_btn_list_view_custom_basic"
         android:textColor="@android:color/white"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="62dp" />
+        tools:layout_editor_absoluteY="62dp"
+        tools:ignore="MissingConstraints" />
 
 </android.support.constraint.ConstraintLayout>
