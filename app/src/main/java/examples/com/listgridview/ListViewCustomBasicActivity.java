@@ -37,7 +37,7 @@ public class ListViewCustomBasicActivity extends AppCompatActivity {
         names.add("Katherine");
 
         //Adaptador, la forma visual en que mostraremos nuestros datos
-        MyAdapter myAdapter = new MyAdapter(this, R.layout.activity_list_view_custom_basic, names);
+        MyAdapter myAdapter = new MyAdapter(this, R.layout.list_item, names);
 
         //Enlazamos el adaptador personalizado con nuestro listview
         listView.setAdapter(myAdapter);

@@ -57,11 +57,9 @@ public class MyAdapter extends BaseAdapter {
 
         //Nos traemos el valor actual dependiente de la posición
         String currentName = names.get(position);
-        //Asi tambien se puede acceder a un item del array
-        //currentName = (String) getItem(postition);
 
         //Referenciamos el o los elementos a modificar y lo rellenamos
-        holder.nameTextView.setText(currentName); ;
+        holder.nameTextView.setText(currentName);
 
         //Devolvemos la vista inflada y modificada con nuestros datos
         return convertView;

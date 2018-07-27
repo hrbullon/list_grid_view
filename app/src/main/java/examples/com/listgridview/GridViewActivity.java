@@ -13,8 +13,6 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-import static examples.com.listgridview.R.menu.action_bar_menu;
-
 public class GridViewActivity extends AppCompatActivity {
 
     private GridView gridView;
@@ -43,20 +41,17 @@ public class GridViewActivity extends AppCompatActivity {
         names.add("Juan");
         names.add("Katherine");
 
-        //Adaptador, la forma visual en que mostraremos nuestros datos
-        myAdapter = new MyAdapter(this, R.layout.activity_grid_view, names);
-
-        //Enlazamos el adaptador personalizado con nuestro listview
-        gridView.setAdapter(myAdapter);
-
         //Capturar el evento click sobre los item del listview
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int position, long ld) {
-                Toast.makeText(GridViewActivity.this, "Clicked: "+ names.get(position), Toast.LENGTH_LONG).show();
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+                Toast.makeText(GridViewActivity.this, "Clicked: " + names.get(position), Toast.LENGTH_LONG).show();
             }
         });
 
+        // Enlazamos con nuestro adaptador personalizado
+        myAdapter = new MyAdapter(this, R.layout.grid_item, names);
+        gridView.setAdapter(myAdapter);
 
     }
 
