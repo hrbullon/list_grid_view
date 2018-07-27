@@ -1,28 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <Button
         android:id="@+id/btn_list_view_simple"
         android:layout_width="match_parent"
-        android:text="@string/text_btn_list_view_simple"
-        android:textColor="@android:color/white"
+        android:layout_height="wrap_content"
         android:background="@color/colorAccent"
-        android:layout_height="wrap_content"/>
+        android:text="@string/text_btn_list_view_simple"
+        android:layout_marginBottom="7sp"
+        android:textColor="@android:color/white"/>
 
     <Button
         android:id="@+id/btn_list_view_custom_basic"
         android:layout_width="match_parent"
-        android:layout_height="52dp"
+        android:layout_height="wrap_content"
         android:background="@color/colorAccent"
         android:text="@string/text_btn_list_view_custom_basic"
-        android:textColor="@android:color/white"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="62dp"
-        tools:ignore="MissingConstraints" />
+        android:layout_marginBottom="7sp"
+        android:textColor="@android:color/white"/>
 
-</android.support.constraint.ConstraintLayout>
+    <Button
+        android:id="@+id/btn_grid_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:text="@string/text_btn_grid_view"
+        android:textColor="@android:color/white"/>
+
+</LinearLayout>
